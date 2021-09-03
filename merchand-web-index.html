@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+
+    <!-- CDN File -->
+    <script type="text/javascript" src="js/thejs.js"></script>
+
+    <!-- Merchand Custom CSS -->
+    <style>
+        #hoopyContainer {
+            height: 400px;
+            width: 300px;
+            background-color: aqua;
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+        }
+
+        #btn {
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id='btn'>Load Hoopy</button>
+    <div id="hoopyContainer"></div>
+
+    <script>
+        $(document).off('click', '#btn').on('click', '#btn', function () {
+            $.fn.loadPopup('hoopyContainer');
+        })
+    </script>
+</body>
+
+</html>
